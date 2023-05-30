@@ -1,6 +1,7 @@
-form.addEventListener('submit', envia);
+import { estado } from "./store.js";
 
-let estado = 0;
+const form = document.forms.entrada;
+form.addEventListener('submit', envia);
 
 function envia(evento){
     evento.preventDefault();
@@ -11,5 +12,5 @@ function envia(evento){
 
 function atualiza(){
     const ol = document.querySelector('ol');
-    ol.innerHTML = <li>${estado}</li>;
+    ol.innerHTML = '<li>${estado}</li>';
 }
